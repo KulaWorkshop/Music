@@ -4,7 +4,7 @@ Importing custom music into the game is pretty simple, and only requires 3 simpl
 
 ## Encoding XA Files
 
-Music tracks in Kula World are stored in `.XA` files, which can be created with custom tracks to be played in the game. Each XA file stores **4** tracks, who's structures can be reference in the [tables section](). To build your own custom XA file, you need 3 tools:
+Music tracks in Kula World are stored in `.XA` files, which can be created with custom tracks to be played in the game. Each XA file stores **4** tracks, who's structures can be reference in the [tables section](/TABLES.md). To build your own custom XA file, you need 3 tools:
 
 -   [ffmpeg](https://github.com/BtbN/FFmpeg-Builds/releases) - Download the latest release for your platform, only the `ffmpeg` executable inside the `bin` folder is required. This is a very common tool and will be used for converting audio files into a compatible `.wav` format before conversion.
 -   [candyk-psx-tools](http://psx.arthus.net/sdk/candyk-psx-tools-win.zip) - Only the `psxavenc` and `xainterleave` executables are required, and will be used for converting compatible audio files into the `.XA` format.
@@ -60,4 +60,4 @@ Unfortunately, the game hardcodes the lengths of each track used in-game, meanin
 -   If your track is **shorter** than the one you're replacing, then the game will play another track after yours is finished until it resets.
 -   If your track is **longer** than the one you're replacing, then the game will replay your track before it actually ends.
 
-Each track's length can be seen in the [tables section](), so please ensure your track is the correct length to prevent unexpected issues from happening!
+Each track's length can be seen in the [tables section](/TABLES.md), so please ensure your track is the correct length to prevent unexpected issues from happening!
