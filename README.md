@@ -11,7 +11,7 @@ Music tracks in Kula World are stored in `.XA` files, which can be created with 
 
 After these are downloaded, you can put them into the same directory:
 
-**INSERT IMAGE HERE**
+![directory-image](https://raw.githubusercontent.com/KulaWorkshop/Music/main/directory.png)
 
 Now, let's get into the commands. For this example, we will be using the [Kula Quest demo soundtrack](https://youtu.be/uFph4DZQ6ys). Check to make sure your track matches the lengh of the one you're replacing (see [track length limitation](#Track-Length-Limitation) for more information). After you have your audio file, which can be in any format, you need to convert it into a **16-bit ADPCM mono wav** file using **ffmpeg**. Open a command line in the current directory and run the following command:
 
