@@ -13,7 +13,7 @@ After these are downloaded, you can put them into the same directory:
 
 ![directory-image](https://raw.githubusercontent.com/KulaWorkshop/Music/main/directory.png)
 
-Now, let's get into the commands. For this example, we will be using the [Kula Quest demo soundtrack](https://youtu.be/uFph4DZQ6ys). Check to make sure your track matches the lengh of the one you're replacing (see [track length limitation](#Track-Length-Limitation) for more information). After you have your audio file, which can be in any format, you need to convert it into a **16-bit ADPCM mono wav** file using **ffmpeg**. Open a command line in the current directory and run the following command:
+Now, let's get into the commands. For this example, we will be using the [Kula Quest demo soundtrack](https://youtu.be/uFph4DZQ6ys). Check to make sure your track's length is set properly in **ExePatch** (see [track length](#Track-Length) below for more information). After you have your audio file, which can be in any format, you need to convert it into a **16-bit ADPCM mono wav** file using **ffmpeg**. Open a command line in the current directory and run the following command:
 
 `ffmpeg -i input.mp3 -acodec pcm_s16le -ac 2 -ar 44100 output.wav`
 <br>
@@ -53,11 +53,8 @@ This tool will take the 4 tracks described in the text file, and build the final
 
 It is worth noting that when importing custom `.XA` files into any game, it's **strongly** recommended to use a tool like [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) to build your game from scratch, instead of injecting the file with a tool such as psx-mode2. I demonstrate how to use mkpsxiso in my [randomizer tutorial](https://youtu.be/ebwn7yB1bUc).
 
-## Track Length Limitation
+## Track Length
 
-Unfortunately, the game hardcodes the lengths of each track used in-game, meaning that if you import your own custom track over another, **your track should be the same length as the one you're replacing**, otherwise:
+~~Unfortunately, the game hardcodes the lengths of each track used in-game, meaning that if you import your own custom track over another, **your track should be the same length as the one you're replacing**.~~
 
--   If your track is **shorter** than the one you're replacing, then the game will play another track after yours is finished until it resets.
--   If your track is **longer** than the one you're replacing, then the game will replay your track before it actually ends.
-
-Each track's length can be seen in the [tables section](/TABLES.md), so please ensure your track is the correct length to prevent unexpected issues from happening!
+As of **06/12/2023**, customizing track lengths is now possible! Using my new tool [ExePatch](https://github.com/KulaWorkshop/ExePatch), the lengths of each XA file inside the game's executable file can be modified! Simply open up the tool, and set the length of each track in seconds.
