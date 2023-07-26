@@ -13,7 +13,7 @@ After these are downloaded, you can put them into the same directory:
 
 ![directory-image](https://raw.githubusercontent.com/KulaWorkshop/Music/main/directory.png)
 
-Now, let's get into the commands. For this example, we will be using the [Kula Quest demo soundtrack](https://youtu.be/uFph4DZQ6ys). Check to make sure your track's length is set properly in **ExePatch** (see [track length](#Track-Length) below for more information). After you have your audio file, which can be in any format, you need to convert it into a **16-bit ADPCM mono wav** file using **ffmpeg**. Open a command line in the current directory and run the following command:
+Now, let's get into the commands. For this example, we will be using the [Kula Quest demo soundtrack](https://youtu.be/uFph4DZQ6ys). Check to make sure your track's length is set properly in **ExePatch** (see [track length](#track-length) below for more information). After you have your audio file, which can be in any format, you need to convert it into a **16-bit ADPCM mono wav** file using **ffmpeg**. Open a command line in the current directory and run the following command:
 
 `ffmpeg -i input.mp3 -acodec pcm_s16le -ac 2 -ar 44100 output.wav`
 <br>
